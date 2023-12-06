@@ -11,7 +11,7 @@ class TitleText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(label, style: MyFont.blackw700s20),
+        Text(label, style: MyFont.blackw700s20Plus),
         const Padding(padding: EdgeInsets.only(bottom: 8)),
         Text(desc, style: MyFont.black55w500s14Plus)
       ]),

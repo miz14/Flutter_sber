@@ -30,7 +30,7 @@ class HeaderTittle extends StatelessWidget {
                 child: Image.asset('imgs/avatar.png', width: 110, height: 110),
               ),
               const Padding(padding: EdgeInsets.only(top: 36)),
-              const Text('Екатерина')
+              const Text('Екатерина', style: MyFont.blackw700s24Plus)
             ],
           ),
           Padding(

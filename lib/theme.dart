@@ -49,9 +49,19 @@ class MyFont {
     color: MyColors.black55,
     letterSpacing: -0.4,
   );
-  static const blackw700s20 = TextStyle(
+  static const blackw700s20Plus = TextStyle(
       fontFamily: "SFProText",
       fontSize: 20,
       fontWeight: FontWeight.w700,
-      color: MyColors.black);
+      color: MyColors.black,
+      height: 1.2,
+      letterSpacing: -0.7);
+  static const blackw700s24Plus = TextStyle(
+    fontFamily: "SFProText",
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+    color: MyColors.black,
+    height: 1.33,
+    letterSpacing: -0.7
+  );
 }
