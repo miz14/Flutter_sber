@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sber_prikol/elements/PageButton.dart';
+import 'package:sber_prikol/elements/page_button.dart';
 
 class HeaderRow2 extends StatelessWidget {
   const HeaderRow2({super.key});

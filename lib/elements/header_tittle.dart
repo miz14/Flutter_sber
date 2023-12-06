@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sber_prikol/elements/IconWidget.dart';
+import 'package:sber_prikol/elements/icon_widget.dart';
 
 class HeaderTittle extends StatelessWidget {
   const HeaderTittle({super.key});

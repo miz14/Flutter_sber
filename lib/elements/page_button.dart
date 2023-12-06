@@ -24,7 +24,7 @@ class PageButton extends StatelessWidget {
       onPressed: onPressed,
       child: SizedBox(
         height: 55,
-        child: Text(text, style: TextStyle(color: Colors.black),)
+        child: Text(text, style: const TextStyle(color: Colors.black),)
       ),
     );
   }
