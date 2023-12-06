@@ -7,29 +7,43 @@ class TarifsBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Map tarif1 = {"img" : "imgs/lim1.svg", "name" : "Изменить суточный лимит", "desc" : "На платежи и переводы"};
-    Map tarif2 = {"img" : "imgs/lim2.svg", "name" : "Переводы без комиссии", "desc" : "Показать остаток в этом месяце"};
-    Map tarif3 = {"img" : "imgs/lim3.svg", "name" : "Информация о тарифах и лимитах", "desc" : ""};
+    Map tarif1 = {
+      "img": "imgs/lim1.svg",
+      "name": "Изменить суточный лимит",
+      "desc": "На платежи и переводы"
+    };
+    Map tarif2 = {
+      "img": "imgs/lim2.svg",
+      "name": "Переводы без комиссии",
+      "desc": "Показать остаток в этом месяце"
+    };
+    Map tarif3 = {
+      "img": "imgs/lim3.svg",
+      "name": "Информация о тарифах и лимитах",
+      "desc": ""
+    };
     var tarifData = [tarif1, tarif2, tarif3];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TitleText(label: "Тарифы и лимиты", desc: "Для операций в Сбербанк Онлайн"),
+        const TitleText(
+            label: "Тарифы и лимиты", desc: "Для операций в Сбербанк Онлайн"),
         SizedBox(
-          height: 64 * 3,
-          child:
-        ListView.separated(
-            clipBehavior: Clip.none,
-            itemCount: tarifData.length,
-            physics: const NeverScrollableScrollPhysics(),
-            itemBuilder: (BuildContext context, int index) {
-            return (
-              Tarif(img: tarifData[index]["img"], name: tarifData[index]["name"], desc: tarifData[index]["desc"], onPressed: (){})
-            );
-            },
-            separatorBuilder: (BuildContext context, int indx) => const Divider(indent: 16+36+12, height: 0),
-        )
-          )
+            height: 64 * 3,
+            child: ListView.separated(
+              clipBehavior: Clip.none,
+              itemCount: tarifData.length,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (BuildContext context, int index) {
+                return (Tarif(
+                    img: tarifData[index]["img"],
+                    name: tarifData[index]["name"],
+                    desc: tarifData[index]["desc"],
+                    onPressed: () {}));
+              },
+              separatorBuilder: (BuildContext context, int indx) =>
+                  const Divider(indent: 16 + 36 + 12, height: 0),
+            ))
       ],
     );
   }
