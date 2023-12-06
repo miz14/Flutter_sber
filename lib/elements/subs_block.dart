@@ -24,7 +24,7 @@ class SubsBlock extends StatelessWidget {
             itemCount: subData.length,
             itemBuilder: (BuildContext context, int index) {
             return (
-              Sub(imgAsset: subData[index]["img"], name: subData[index]["name"], date: subData[index]["date"], money: subData[index]["money"])
+              Sub(imgAsset: subData[index]["img"], name: subData[index]["name"], date: subData[index]["date"], money: subData[index]["money"], onPressed: (){})
             );
             },
             separatorBuilder: (BuildContext context, int indx) => const Padding(padding: EdgeInsets.only(right: 8)),

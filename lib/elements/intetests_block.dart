@@ -15,11 +15,12 @@ class InterestsBlock extends StatelessWidget {
         const TitleText(label: "Интересы", desc: "Мы подбираем истории и предложения по темам, которые вам нравятся"),
         Padding(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
         child:
-          Wrap(children: [
-            for (int i = 0; i < interes.length; i++) InterestItem(text: interes[i], onPressed: (){})
-          ],
+          Wrap(
           spacing: 8,
-          runSpacing: -8,
+          runSpacing: -8,  
+          children: [
+            for (int i = 0; i < interes.length; i++) InterestItem(text: interes[i], onPressed: (){})
+          ]
           )
         ) 
       ],

@@ -6,22 +6,31 @@ class Sub extends StatelessWidget {
   final String name;
   final String date;
   final String money;
-  const Sub({Key ? key, required this.imgAsset, required this.name, required this.date, required this.money}) : super(key: key);
+  final VoidCallback onPressed;
+  const Sub({Key ? key, required this.imgAsset, required this.name, required this.date, required this.money, required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
   return Container(
       height: 130,
       width: 216,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const [
+      decoration: const BoxDecoration(
+        boxShadow: [
           BoxShadow(color: Color.fromRGBO(79, 79, 108, 0.07), offset: Offset(0, 8), blurRadius: 14),
           BoxShadow(color: Color.fromRGBO(0, 0, 0, 0.08), offset: Offset(0, 2), blurRadius: 10)
           ]
         ),
-        child: Padding(
+        child: FilledButton(
+          style: FilledButton.styleFrom(
+            padding: const EdgeInsets.all(0),
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12)
+            ),
+          ),
+          onPressed: onPressed,
+          child: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,6 +67,7 @@ class Sub extends StatelessWidget {
             ]
           ),
         ),
+        )
     );
   }
 }
