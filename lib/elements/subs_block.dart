@@ -21,6 +21,7 @@ class SubsBlock extends StatelessWidget {
     };
     var subData = [sub1, sub2];
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const TitleText(
             label: "У вас подключено",
